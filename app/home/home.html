@@ -1,0 +1,38 @@
+<style>
+	.display_block {
+		display: block!important;
+		padding-right: 17px!important;
+	}
+</style>
+<div class="container">
+	<div class="row">
+		<div class="input-group mb-3 mt-5">
+		  	<div class="input-group-prepend">
+    			<span class="input-group-text" id="input-search">Buscar</span>
+  			</div>
+  			<input type="text" class="form-control" 
+  				ng-model="query" 
+  				ng-change="changeSearch()"
+				aria-label="Buscar" 
+				aria-describedby="input-search">
+		</div>
+	</div>
+
+	<div class="row mt-5">
+		<div dir-paginate="item in responseQuery | itemsPerPage:pageSize"
+			total-items="totalResults" 
+			current-page="pagination.current"
+			class="col-md-12 mt-2 mb-2">
+			<item-info item="item" click-on="detailItem(item)"></item-info>
+		</div>
+		<div class="col">
+			<dir-pagination-controls on-page-change="pageChanged(newPageNumber)" direction-links="false" template-url="home/pagination.tpl.html"></dir-pagination-controls>
+		</div>
+	</div>
+
+	<modal-dialog 
+		showopen='modalShown' 
+        itemselect='itemselect'
+        template-uri="home/modal_detail.html">
+  	</modal-dialog>	  	
+</div>

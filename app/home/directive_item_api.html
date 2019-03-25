@@ -1,0 +1,15 @@
+<div ng-if="item.media_type == 'person'">
+	<h3 ng-click="clickOn({obj: item})">{{ item.name }}</h3>
+	<em>{{ item.media_type | mediatypehuman }}</em>
+</div>
+<div ng-if="item.media_type == 'tv'">
+	<h3 ng-click="clickOn({obj: item})">{{ item.name }}</h3>
+	<em>{{ item.media_type | mediatypehuman }}</em>
+	<p>{{ item.overview }}</p>
+</div>
+<div ng-if="item.media_type == 'movie'">
+	<h3 ng-click="clickOn({obj: item})">{{ item.title }}</h3>
+	<em>{{ item.media_type | mediatypehuman }}</em>
+	<p>{{ item.overview }}</p>
+</div>
+

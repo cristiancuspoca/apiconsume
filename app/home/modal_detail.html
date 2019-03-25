@@ -1,0 +1,27 @@
+<div ng-class="!!showopen ? 'modal fade show display_block' : 'modal fade'" 
+    id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-modal="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 ng-if="itemselect.media_type == 'person'" id="exampleModalCenterTitle">{{ itemselect.name }}</h5>
+                <h5 ng-if="itemselect.media_type == 'tv'" id="exampleModalCenterTitle">{{ itemselect.name }}</h5>
+                <h5 ng-if="itemselect.media_type == 'movie'" id="exampleModalCenterTitle">{{ itemselect.title }}</h5>
+                <button type="button" class="close" ng-click=closeModal() aria-label="Close">
+                    <span aria-modal="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <em>{{ itemselect.media_type | mediatypehuman }}</em>
+                <p>{{ itemselect.overview }}</p>
+                <div class="text-center">
+                    <img ng-if="itemselect.media_type == 'person'" class="img-fluid" src="https://image.tmdb.org/t/p/w200{{ itemselect.profile_path }}" alt="">
+                    <img ng-if="itemselect.media_type == 'tv'" class="img-fluid" src="https://image.tmdb.org/t/p/w200{{ itemselect.poster_path }}" alt="">
+                    <img ng-if="itemselect.media_type == 'movie'" class="img-fluid" src="https://image.tmdb.org/t/p/w200{{ itemselect.poster_path }}" alt="">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" ng-click=closeModal()>Close</button>
+            </div>
+        </div>
+    </div>
+</div>
