@@ -3,7 +3,7 @@
 const myServices = angular.module('apiMovies.services', []);
 
 myServices.constant('URLAPI', 'http://api.themoviedb.org/3');
-myServices.constant('APIKEY', 'b4003f183467648a23b25761f187aa6b');
+myServices.constant('APIKEY', 'MY_API_KEY');
 
 myServices.factory('moviesAPIservice', function($http, APIKEY, URLAPI) {
 
