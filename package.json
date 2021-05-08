@@ -6,7 +6,7 @@
   "repository": "https://github.com/angular/angular-seed",
   "license": "MIT",
   "dependencies": {
-    "angular": "^1.7.5",
+    "angular": "^1.8.2",
     "angular-loader": "^1.7.5",
     "angular-route": "^1.7.5",
     "angular-ui-bootstrap": "^2.5.6",
@@ -17,7 +17,7 @@
   "devDependencies": {
     "angular-mocks": "^1.7.5",
     "cpx": "^1.5.0",
-    "http-server": "^0.11.1",
+    "http-server": "^0.12.3",
     "jasmine-core": "^3.3.0",
     "karma": "^3.1.1",
     "karma-chrome-launcher": "^2.2.0",
